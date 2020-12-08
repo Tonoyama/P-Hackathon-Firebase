@@ -12,7 +12,7 @@ REACT_APP_MESSAGING_SENDER_ID=xxxxxxxxxxxxxxxxxxxxxx
 REACT_APP_CONFIRMATION_EMAIL_REDIRECT=http://localhost:3000
 ```
 
-* `git clone git@github.com:the-road-to-react-with-firebase/react-firebase-authentication.git`
+* `git clone https://github.com/Tonoyama/P-Hackathon-Firebase.git
 * `cd react-firebase-authentication`
 * `npm install`
 * `npm start`
