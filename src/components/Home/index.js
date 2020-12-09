@@ -15,7 +15,7 @@ const HomePage = () => (
   spreadSheetUrl="https://docs.google.com/spreadsheets/d/1-0vUfi334esqOtoEy5BoiW4mTz7DHOfOsKsQGB5LKGU/edit#gid=0"
 
   options={{
-    title: 'My Daily Activities'
+    title: '入退室人数（日別）'
   }}
   rootProps={{ 'data-testid': '4' }}
 />
