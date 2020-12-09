@@ -1,45 +1,24 @@
 import React from 'react';
 import { compose } from 'recompose';
 import { withAuthorization, withEmailVerification } from '../Session';
-import { Chart } from "react-google-charts";
 
-const chartEvents = [
-  {
-    eventName: "select",
-    callback({ chartWrapper }) {
-      console.log("Selected ", chartWrapper.getChart().getSelection());
-    }
-  }
-];
-const data = [
-  ["age", "weight"],
-  [8, 12],
-  [4, 5.5],
-  [11, 14],
-  [4, 5],
-  [3, 3.5],
-  [6.5, 7]
-];
-
-const options = {
-  title: "Age vs. Weight comparison",
-  hAxis: { title: "Age", viewWindow: { min: 0, max: 15 } },
-  vAxis: { title: "Weight", viewWindow: { min: 0, max: 15 } },
-  legend: "none"
-};
+const { Chart } = require("react-google-charts");
 
 const HomePage = () => (
   <div>
-    <h1>現在の入退室状況</h1>
+    <h1>入退室人数（日別）</h1>
     <Chart
-      chartType="ScatterChart"
-      data={data}
-      options={options}
-      graphID="ScatterChart"
-      width="100%"
-      height="400px"
-      chartEvents={chartEvents}
-    />
+  width={'500px'}
+  height={'300px'}
+  chartType="Line"
+  loader={<div>Loading Chart</div>}
+  spreadSheetUrl="https://docs.google.com/spreadsheets/d/1-0vUfi334esqOtoEy5BoiW4mTz7DHOfOsKsQGB5LKGU/edit#gid=0"
+
+  options={{
+    title: 'My Daily Activities'
+  }}
+  rootProps={{ 'data-testid': '4' }}
+/>
   </div>
 );
 
